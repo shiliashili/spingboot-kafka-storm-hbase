@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: springboot-storm-wjy
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: 20180948
+Implementation-Vendor-Id: com.shilia
+Build-Jdk: 1.8.0_181
+Implementation-URL: http://projects.spring.io/spring-boot/springboot-s
+ torm-wjy/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

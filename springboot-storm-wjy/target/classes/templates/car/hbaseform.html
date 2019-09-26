@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- 需要添加
+<html  xmlns:th="http://www.thymeleaf.org">
+这样在后面的th标签就不会报错
+ -->
+<html  xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+<!--     <title th:text="${username}">xx</title> -->
+</head>
+<body>
+<h1>hbase新增数据</h1>
+ <form action="#" th:action="@{hbase}" th:object="${hb}" method="post">
+  <p>表名:<input type="text" th:field="*{tableName}" /></p> 
+  <p>列名:<input type="text" th:field="*{qualifier}" /></p>
+  <p>列族:<input type="text" th:field="*{family}" /></p>
+  <p>值:<input type="text" th:field="*{value}" /></p>
+  <p>行号:<input type="text" th:field="*{rowKey}" /></p>  
+  <p><input type="submit" /></p>
+  </form> 
+</body>
+<a href="/"><button>返回主菜单</button></a>
+<a href="findhbase"><button>查看数据</button></a>
+</html>

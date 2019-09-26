@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>用户列表</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+</head>
+<body class="container">
+<br/>
+<h1>用户列表</h1>
+<br/><br/>
+<div class="with:80%">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>name</th>
+            <th>usr</th>
+            <th>删除</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr  th:each="car : ${cars}">
+            <th scope="row" th:text="${car.id}">1</th>
+            <td th:text="${car.name}">shilia</td>
+            <td th:text="${car.usr}">123456</td>
+<!--             <td><a th:href="@{/toEdit(id=${car.id})}">编辑</a></td> -->
+            <td><a th:href="@{/toDelete(id=${car.id})}">删除</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!-- <div class="form-group"> -->
+<!--     <div class="col-sm-2 control-label"> -->
+<!--         <a href="/toAdd" th:href="@{/toAdd}" class="btn btn-info">添加</a> -->
+<!--     </div> -->
+<!-- </div> -->
+
+</body>
+<div>
+<a href="kafka"><button>返回</button></a>
+</div>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- 需要添加
+<html  xmlns:th="http://www.thymeleaf.org">
+这样在后面的th标签就不会报错
+ -->
+<html  xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<!--     <title th:text="${username}">xx</title> -->
+<link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+</head>
+<body>
+<h1>kafka生产数据</h1>
+<!-- 表单提交用户信息,注意字段的设置,直接是*{} -->
+ <form action="#" th:action="@{kafkaproducer}" th:object="${car}" method="post">
+  <p>name:<input type="text" th:field="*{name}" /></p>
+  <p>usr: <input type="text" th:field="*{usr}" /></p>
+  <p><input type="submit" /></p>
+</form> 
+
+</body>
+
+<div>
+<a href="/"><button>返回主菜单</button></a>
+<a href="findall"><button>查看数据</button></a>
+</div>
+</html>

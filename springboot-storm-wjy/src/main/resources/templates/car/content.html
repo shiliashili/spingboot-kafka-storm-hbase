@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- 需要添加
+<html  xmlns:th="http://www.thymeleaf.org">
+这样在后面的th标签就不会报错
+ -->
+<html  xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+</head>
+<body>
+<!-- <h1>kafka生产数据</h1> -->
+<!-- 表单提交用户信息,注意字段的设置,直接是*{} -->
+  <p><a href="kafka"><button>kafka生产数据</button></a></p>
+  <p><a href="hbaseform"><button>插入hbase数据</button></a></p>
+</body>
+<div>
+</div>
+</html>
